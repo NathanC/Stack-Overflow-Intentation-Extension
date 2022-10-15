@@ -6,6 +6,8 @@ It uses spaces (not tab characters) when you tab, and defaults to 4 spaces. It a
 
 Click on the extention in your toolbar to open up the settings, where you can change the spaces-per-tab, disable the border gradient, and disable the whole extention temporarily if you'd like.
 
+![image](https://user-images.githubusercontent.com/6182419/196011357-e79fd227-93db-4ad2-a2fe-e09b17ad3d33.png)
+
 (In Chrome you may not see the extention in your toolbar right away, but can find it by clicking the puzzle icon and pinning it.)
 
 # AppStore Link
