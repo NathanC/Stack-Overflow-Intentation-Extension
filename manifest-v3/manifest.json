@@ -1,0 +1,49 @@
+{
+
+    "manifest_version": 3,
+    "name": "Stack Overflow Indentation++",
+    "version": "0.1",
+ 
+    "description": "Enables rich IDE-like tabbing/shift-tabbing indentation on Stack Overflow and Meta Stack Overflow.",
+    "homepage_url": "https://github.com/NathanC/Stack-Overflow-Intentation-Extension",
+
+    "icons": {
+      "48": "../icons/store-page-icon48.png"
+    },
+  
+    "content_scripts": [
+      {
+        "matches": ["*://*.stackoverflow.com/*"],
+        "js": ["../src/content_script.ts"],
+        "css": ["../src/content_script.scss"]
+      }
+    ],
+
+    "permissions": [
+      "storage"
+    ],
+
+    "background": {
+      "service_worker": "../src/background-v3.ts",
+      "type": "module"
+    },
+
+    "action": {
+        "browser_style": true,
+        "default_popup": "../src/popups/default_popup.html",
+        "default_icon": {
+          "32": "../icons/light-tab-icon32.png",
+          "48": "../icons/light-tab-icon48.png"
+        },
+        "theme_icons": [{
+          "light": "../icons/light-tab-icon32.png",
+          "dark": "../icons/dark-tab-icon32.png",
+          "size": 32
+        }, {
+          "light": "../icons/light-tab-icon48.png",
+          "dark": "../icons/dark-tab-icon48.png",
+          "size": 48
+        }]
+      }
+  }
+  
