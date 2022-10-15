@@ -15,7 +15,7 @@ Click on the extention in your toolbar to open up the settings, where you can ch
 This is currently published on the Firefox Add-On Store.
 * Firefox Add-On Link
 
-It is not published for Chrome, because of privacy considerations. However, it's easy to install:
+It is not published for Chrome, because of privacy considerations (**If you want to upload it to the Chrome store for me, open an issue and I'll work with you**). However, it's easy to install locally:
 1. Clone this repo, or download and unzip the "dist-v3" folder
 2. Go to `chrome://extensions/` in Chrome, select "Load Unpacked", and selected the `dist-v3` folder.
 3. Profit!
@@ -41,21 +41,23 @@ Well, I'm going to attribute him anyway. I've converted it to TypeScript, but ke
 
 It was fun to create this though, and I hope it's useful for people until the new editor goes live!
 
-# Building
+# Building / Installation
 
 I used Parcel, TypeScript, and React for this. I based my inital structure on [this blog post](https://areknawo.com/modern-web-extension-development-with-typescript/), but upgraded to Parcel v2, with a [recipe for web extensions](https://parceljs.org/recipes/web-extension/). It works quite nicely.
 
-The npm scripts are:
-```
-npm run watch-v2 // bundles in the dev-dist-v2 directory, and watches for changes
-npm run build-v2 // bundles in the dist-v2 directory, for packing for Firefox, uses the v2 manifest
-npm run build-v3 // bundles in the dist-v3 directory, for packing for Chrome (and hypothetically Edge), uses the v3 manifest
-```
+Installing:
+1)  Download the most recent version of `npm` (I used `8.13.2`, anything newer should work, and likely older versions should work as well)
+2)  Clone this repo
+3)  `npm install`
+4)  run one of the following scripts, depending on what you're targetting:
+    * `npm run watch-v2` // bundles in the dev-dist-v2 directory, and watches for changes
+    * `npm run build-v2` // bundles in the dist-v2 directory, for packing for Firefox, uses the v2 manifest
+    * `npm run build-v3` // bundles in the dist-v3 directory, for packing for Chrome (and hypothetically Edge), uses the v3 manifest
+5) Install in Firefox or Chrome (or Edge?) using the v2 (Firefox) or v3 (Chrome/Edge) dist directories and the developer extension loading system
 
 To develop, run `npm run watch-v2`, and then in another terminal run `npx web-ext run --source-dir ./dev-dist-v2`. You can optionally add the `--firefox-profile` flag and pass in your profile directory, so that the browser instance that's opened copies your profile and you have all your other extensions and cookies. However, it takes a bit to copy over the profile.
 
 To publish, run the two build scripts, and package the resulting directory in whatever way the store you're uploading to.
-s
 If you want to publish a fork, please rename it and use a different Extension ID.
 
 # TODO
