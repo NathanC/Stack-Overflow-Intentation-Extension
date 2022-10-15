@@ -2,3 +2,4 @@ node_modules
 
 dev-dist-v2
 .parcel-cache
+source_code_snapshots
