@@ -1,19 +1,18 @@
 # Stack Overflow Indentaion++
 
-A web extension (For Firefox and Chrome) that enabled rich IDE-like tabbing and tab-shifting when editing questions/answers in Stack Overflow and Meta Stack Overflow. 
+A web extension (For Firefox and Chrome) that enables rich IDE-like tabbing and shift-tabbing when editing questions/answers in Stack Overflow and Meta Stack Overflow. 
 
 It uses spaces (not tab characters) when you tab, and defaults to 4 spaces. It also adds a pretty gradient border to the text area.
 
-Click on the extention in your toolbar to open up the settings, where you can change the spaces-per-tab, disable the border gradient, and disable the whole extention temporarily if you'd like.
+Click on the extension in your toolbar to open up the settings, where you can change the spaces-per-tab, disable the border gradient, and disable the whole extension temporarily if you'd like.
 
 ![image](https://user-images.githubusercontent.com/6182419/196011391-7cfe6631-5d89-4c9f-8999-b342b208095a.png)
 
-(In Chrome you may not see the extention in your toolbar right away, but can find it by clicking the puzzle icon and pinning it.)
+(In Chrome you may not see the extension in your toolbar right away, but can find it by clicking the puzzle icon and pinning it.)
 
 # AppStore Link
 
-This is currently published on the Firefox Add-On Store.
-* Firefox Add-On Link
+This has been submitted to the Firefox Add-on store, and should hopefully be accepted soon.
 
 It is not published for Chrome, because of privacy considerations (**If you want to upload it to the Chrome store for me, open an issue and I'll work with you**). However, it's easy to install locally:
 1. Clone this repo, or download and unzip the "dist-v3" folder
