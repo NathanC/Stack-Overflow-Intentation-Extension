@@ -7,7 +7,7 @@
  * 
  * I decided to leave this in the repo though, because
  * I had a lot of fun using the "on-change" proxy
- * and expiremnting with TypeScript readonly values
+ * and experimenting with TypeScript readonly values
  */
 
 import onChange from 'on-change';
