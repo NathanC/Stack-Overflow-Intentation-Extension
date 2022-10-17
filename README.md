@@ -1,6 +1,6 @@
 # Stack Overflow Indentaion++
 
-A web extension (For Firefox and Chrome) that enables rich IDE-like tabbing and shift-tabbing when editing questions/answers in Stack Overflow and Meta Stack Overflow. 
+A web extension (For [Firefox](https://addons.mozilla.org/en-US/firefox/addon/stack-overflow-rich-tabbing/) and Chrome) that enables rich IDE-like tabbing and shift-tabbing when editing questions/answers in Stack Overflow and Meta Stack Overflow. 
 
 It uses spaces (not tab characters) when you tab, and defaults to 4 spaces. It also adds a pretty gradient border to the text area.
 
@@ -12,7 +12,7 @@ Click on the extension in your toolbar to open up the settings, where you can ch
 
 # AppStore Link
 
-This has been submitted to the Firefox Add-on store, and should hopefully be accepted soon.
+Firefox add-on page: [Stack Overflow Indentation++](https://addons.mozilla.org/en-US/firefox/addon/stack-overflow-rich-tabbing/)
 
 It is not published for Chrome, because of privacy considerations (**If you want to upload it to the Chrome store for me, open an issue and I'll work with you**). However, it's easy to install locally:
 1. Clone this repo, or download and unzip the "dist-v3" folder
