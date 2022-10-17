@@ -7,7 +7,7 @@
  * > It's just sixty lines of code so I don't see the need of any copyright/license/attribution, 
  * > I just wanted to share it with my fellow programmers here on Stack Overflow :)
  * 
- * In that spirit, this file is offically unlicensed, though I have made some modifications. 
+ * In that spirit, this file is offically unlicensed, though I have made some modifications (the rest of this repo is MIT licensed).
  * However, if you use it, please attribute Marco, and optionally me if you use the modifications.
  * 
  * Thanks Marco!
