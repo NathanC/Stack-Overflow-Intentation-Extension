@@ -2,7 +2,7 @@
 
     "manifest_version": 2,
     "name": "Stack Overflow Indentation++",
-    "version": "0.1",
+    "version": "0.2",
     "browser_specific_settings": {
       "gecko": {
         "id": "indentation.extension@distant.land",
@@ -15,7 +15,11 @@
     "icons": {
       "48": "../icons/store-page-icon48.png"
     },
-  
+    
+    "web_accessible_resources": [
+      "images/textAreaOverlay.png",
+      "images/textAreaOverlayHovered.png"
+    ],    
     "content_scripts": [
       {
         "matches": ["*://*.stackoverflow.com/*"],

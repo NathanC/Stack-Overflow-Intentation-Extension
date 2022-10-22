@@ -2,7 +2,7 @@
 
     "manifest_version": 3,
     "name": "Stack Overflow Indentation++",
-    "version": "0.1",
+    "version": "0.2",
  
     "description": "Enables rich IDE-like tabbing/shift-tabbing indentation on Stack Overflow and Meta Stack Overflow.",
     "homepage_url": "https://github.com/NathanC/Stack-Overflow-Intentation-Extension",
@@ -10,6 +10,16 @@
     "icons": {
       "48": "../icons/store-page-icon48.png"
     },
+
+    "web_accessible_resources": [
+      {
+        "resources": [
+          "images/textAreaOverlay.png",
+          "images/textAreaOverlayHovered.png"
+        ],
+        "matches": ["*://*.stackoverflow.com/*"]
+      }
+    ],
   
     "content_scripts": [
       {

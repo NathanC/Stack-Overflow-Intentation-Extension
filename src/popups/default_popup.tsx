@@ -131,7 +131,8 @@ function Popup() {
 
             <Box mt={2} mb={2} display="flex" columnGap={4}>
                 
-                <Link style={{textDecoration: "none"}} component="a" href="https://distant.land" target="_blank" rel="noreferrer">
+                {/* Add UTM parameters so the amount of traffic from this can be tracked. No privacy-impacting stats are collected. */}
+                <Link style={{textDecoration: "none"}} component="a" href="https://distant.land/?utm_source=StackOverflowIndentation%2B%2B&utm_medium=Web+Extension" target="_blank" rel="noreferrer">
                     <Button startIcon={<LanguageIcon/>} variant="contained">Visit Author's Website</Button>
                 </Link>
                 

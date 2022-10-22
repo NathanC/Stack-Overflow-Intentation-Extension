@@ -1,6 +1,6 @@
 {
   "name": "stack-overflow-indentation",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A browser extension that enables rich IDE-like tabbing/shift-tabbing indentation on Stack Overflow and Meta Stack Overflow.",
   "scripts": {
     "build-v3": "tsc && rimraf -rf ./dist-v3 && parcel build manifest-v3/manifest.json --dist-dir dist-v3 --config @parcel/config-webextension",
@@ -21,14 +21,14 @@
     "parcel": "^2.7.0",
     "rimraf": "^3.0.2",
     "typescript": "^4.8.4",
-    "web-ext": "^7.3.0"
+    "web-ext": "^7.3.0",
+    "@types/firefox-webext-browser": "^94.0.1"
   },
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
     "@mui/icons-material": "^5.10.9",
     "@mui/material": "^5.10.9",
-    "@types/firefox-webext-browser": "^94.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }
