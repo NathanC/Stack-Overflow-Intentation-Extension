@@ -1,5 +1,3 @@
-console.log("very start of content script")
-
 import { sendTypedMessage } from "./RuntimeMessage";
 import StorageModal from "./StorageModal";
 import textareaDev from "./textareaDev";
@@ -239,13 +237,10 @@ let storageState: StorageModal = {}
  * observe new text areas added
  *    * and reapply dom modifications
  */
-console.log("about to setup..")
 async function setup() {
 
     const initialStorageState = await storage.sync.get()
     storageState = initialStorageState
-
-    console.log("setting up.. ", initialStorageState)
 
     applyDomModifications(storageState)
 
