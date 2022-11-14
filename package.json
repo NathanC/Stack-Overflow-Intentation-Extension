@@ -3,8 +3,8 @@
   "version": "0.2.0",
   "description": "A browser extension that enables rich IDE-like tabbing/shift-tabbing indentation on Stack Overflow and Meta Stack Overflow.",
   "scripts": {
-    "build-v3": "tsc && rimraf -rf ./dist-v3 && parcel watch --no-hmr manifest-v3/manifest.json --dist-dir dist-v3 --config @parcel/config-webextension",
-    "build-v2": "tsc && rimraf -rf ./dist-v2 && parcel watch --no-hmr manifest-v2/manifest.json --dist-dir dist-v2 --config @parcel/config-webextension",
+    "build-v3": "tsc && rimraf -rf ./dist-v3 && parcel build manifest-v3/manifest.json --dist-dir dist-v3 --config @parcel/config-webextension",
+    "build-v2": "tsc && rimraf -rf ./dist-v2 && parcel build manifest-v2/manifest.json --dist-dir dist-v2 --config @parcel/config-webextension",
     "watch-v2": "rimraf -rf ./dev-dist-v2 && parcel watch manifest-v2/manifest.json --dist-dir dev-dist-v2 --config @parcel/config-webextension"
   },
   "author": "NathanC",
