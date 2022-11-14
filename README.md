@@ -10,6 +10,12 @@ Click on the extension in your toolbar to open up the settings, where you can ch
 
 (In Chrome you may not see the extension in your toolbar right away, but can find it by clicking the puzzle icon and pinning it.)
 
+# Important note
+
+**This extension will soon not be needed, thankfully!** [Stacks Editor](https://github.com/StackExchange/Stacks-Editor), the future engine for editing text on stack exchange, has [already merged](https://github.com/StackExchange/Stacks-Editor/pull/137) rich tab intenting in code blocks. On [Meta Stack Overflow](https://meta.stackoverflow.com/) you can enable the beta editor in your settings, and play around with it (though it only works in answers, not questions), and it seems like Stack Overflow is starting to roll it out too. This extension won't override any of the new editor's behavior, as it doesn't use a TextArea.
+
+It was fun to create this though, and I hope it's useful for people until the new editor goes live!
+
 # AppStore Link
 
 Firefox add-on page: [Stack Overflow Indentation++](https://addons.mozilla.org/en-US/firefox/addon/stack-overflow-rich-tabbing/)
@@ -34,12 +40,6 @@ You can see his CodePen [here](https://codepen.io/MeBeiM/pen/ogrmBP/). As for th
 
 Well, I'm going to attribute him anyway. I've converted it to TypeScript, but kept that file unlicensed. The rest of this project is MIT licensed, and can be freely used or contributed to.
 
-# Important note
-
-**This extension will soon not be needed, thankfully!** [Stacks Editor](https://github.com/StackExchange/Stacks-Editor), the future engine for editing text on stack exchange, has [already merged](https://github.com/StackExchange/Stacks-Editor/pull/137) rich tab intenting in code blocks. On [Meta Stack Overflow](https://meta.stackoverflow.com/) you can enable the beta editor in your settings, and play around with it (though it only works in answers, not questions). This extension won't override any of the new editor's behavior, as it doesn't use a TextArea.
-
-It was fun to create this though, and I hope it's useful for people until the new editor goes live!
-
 # Building / Installation
 
 I used Parcel, TypeScript, and React for this. I based my inital structure on [this blog post](https://areknawo.com/modern-web-extension-development-with-typescript/), but upgraded to Parcel v2, with a [recipe for web extensions](https://parceljs.org/recipes/web-extension/). It works quite nicely.
@@ -54,8 +54,7 @@ Installing:
     * `npm run build-v3` // bundles in the dist-v3 directory, for packing for Chrome (and hypothetically Edge), uses the v3 manifest
 5) Install in Firefox or Chrome (or Edge?) using the v2 (Firefox) or v3 (Chrome/Edge) dist directories and the developer extension loading system
 
-> **_NOTE ON BUILDING:_** There is a strange bug in parcel that got introduced somehow in the last commit, where building with `parcel build` results in an extension that fails to load modules at runtime. I have filed a bug for it [here](https://github.com/parcel-bundler/parcel/issues/8567). As a workaround, I use `parcel watch --no-hmr`, as that seems to build a correct bundle. Both of the `npm run build-v*` commands proxy to that now. It works fine, but unfortunately you need to manually use a keyboard inturrupt after building to get back to the console. Just wait until the `Built in ***ms` message is seen in the output, and the `dist-v*` folder has been created. Then you can press `ctrl + c` to escape from the underlying watch command, and package the dist as specified in step #5 above. Pardon the inconvience, hopefully I'll find a fix soon.
-
+> **_NOTE ON BUILDING:_** There was a strange bug in parcel that got introduced somehow a few commits ago where building with `parcel build` resulted in an extension that fails to load modules at runtime. I have filed a bug for it [here](https://github.com/parcel-bundler/parcel/issues/8567).  It looks like it builds well under Linux now, but I haven't rechecked on Windows. If you see this issue when building, please let me know!
 
 To develop, run `npm run watch-v2`, and then in another terminal run `npx web-ext run --source-dir ./dev-dist-v2`. You can optionally add the `--firefox-profile` flag and pass in your profile directory, so that the browser instance that's opened copies your profile and you have all your other extensions and cookies. However, it takes a bit to copy over the profile.
 
